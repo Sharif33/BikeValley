@@ -86,7 +86,7 @@ const useFirebase = () => {
     //         .then(data => setAdmin(data.admin))
     // }, [user.email])
 
-    const logout = () => {
+    const logOut = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
             // Sign-out successful.
@@ -116,7 +116,7 @@ const useFirebase = () => {
         registerUser,
         loginUser,
         signInWithGoogle,
-        logout,
+        logOut,
     }
 }
 

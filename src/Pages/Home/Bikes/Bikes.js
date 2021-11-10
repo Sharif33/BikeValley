@@ -1,3 +1,4 @@
+import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 import Bike from '../Bike/Bike';
@@ -18,11 +19,8 @@ const Bikes = () => {
             </div>
             <div className="row row-cols-1 row-cols-md-3 m-2 g-4">
                 {bikes.length == 0 ?
-                    <div className="d-flex justify-content-center fs-1">
-                        <button className="btn btn-primary" type="button" disabled>
-                            <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                            Loading...
-                        </button>
+                    <div className="w-100 text-center">
+                        <CircularProgress />
                     </div>
                     :
                     bikes.map(bike => <Bike

@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/bikes">
             <Bikes></Bikes>
           </Route>
-          <PrivateRoute exact path="/resort/:id">
+          <PrivateRoute exact path="/bike/:id">
             <SingleBike></SingleBike>
           </PrivateRoute>
           <Route exact path="/contact">

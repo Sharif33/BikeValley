@@ -27,9 +27,9 @@ const Register = () => {
     }
     return (
         <Container>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Register</Typography>
+            <Grid container sx={{ my: 4 }}>
+                <Grid className="p-4 shadow text-center rounded" item xs={12} md={6}>
+                    <Typography sx={{ fontWeight: 'bold' }} variant="h4" gutterBottom>Please Register</Typography>
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
@@ -74,8 +74,8 @@ const Register = () => {
                     {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: '100%' }} src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" />
+                <Grid className="p-4 text-center rounded" item xs={12} md={6}>
+                    <img className="img-fluid w-100" src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" />
                 </Grid>
             </Grid>
         </Container>
