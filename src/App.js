@@ -1,36 +1,42 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import LogIn from './LogIn/LogIn/LogIn';
+import PrivateRoute from './LogIn/PrivateRoute/PrivateRoute';
 import Register from './LogIn/Register/Register';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import ContactUs from './Pages/ContactUs/ContactUs';
 import Bikes from './Pages/Home/Bikes/Bikes';
 import Home from './Pages/Home/Home/Home';
-// import SingleBike from './Pages/Home/SingleBike/SingleBike';
+import SingleBike from './Pages/Home/SingleBike/SingleBike';
+import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 
 function App() {
   return (
-    <Router>
-      <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route exact path="/home">
-          <Home></Home>
-        </Route>
-        {/* <Route exact path="/about">
-        <AboutUs></AboutUs>
-      </Route> */}
-        <Route exact path="/bikes">
-          <Bikes></Bikes>
-        </Route>
-        {/* <PrivateRoute exact path="/resort/:id">
-        <SingleBike></SingleBike>
-      </PrivateRoute>
-      <Route exact path="/contact">
-        <ContactUs></ContactUs>
-      </Route>
-      <PrivateRoute exact path="/myOrders">
+    <AuthProvider>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/home">
+            <Home></Home>
+          </Route>
+          <Route exact path="/about">
+            <AboutUs></AboutUs>
+          </Route>
+          <Route exact path="/bikes">
+            <Bikes></Bikes>
+          </Route>
+          <PrivateRoute exact path="/resort/:id">
+            <SingleBike></SingleBike>
+          </PrivateRoute>
+          <Route exact path="/contact">
+            <ContactUs></ContactUs>
+          </Route>
+          {/* <PrivateRoute exact path="/myOrders">
         <MyOrders></MyOrders>
       </PrivateRoute>
       <PrivateRoute exact path="/addResort">
@@ -39,18 +45,19 @@ function App() {
       <PrivateRoute exact path="/manageOrder">
         <ManageOrder></ManageOrder>
       </PrivateRoute> */}
-        <Route exact path="/login">
-          <LogIn></LogIn>
-        </Route>
-        <Route exact path="/register">
-          <Register></Register>
-        </Route>
-        {/* <Route path="*">
-        <NotFound></NotFound>
-      </Route> */}
-      </Switch>
-      <Footer></Footer>
-    </Router>
+          <Route exact path="/login">
+            <LogIn></LogIn>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
+    </AuthProvider>
   );
 }
 

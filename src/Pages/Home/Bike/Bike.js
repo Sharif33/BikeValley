@@ -16,7 +16,7 @@ const Bike = ({ bike }) => {
                         <Box sx={{
                             '& > legend': { mt: 2 },
                         }}>
-                            <Rating name="size-small" defaultValue={2} size="small" name="read-only" value={rating} readOnly /> <span>({reviews})</span>
+                            <Rating name="size-small, read-only" defaultValue={2} size="small" value={rating} readOnly /> <span>({reviews})</span>
                         </Box>
                     </div>
                     <img style={{ height: "15rem" }} src={image} className="card-img-top" alt="" />
