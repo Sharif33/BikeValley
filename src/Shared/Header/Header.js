@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
@@ -42,9 +43,9 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <button onClick={logOut} className="btn btn-light fs-6">Logout</button>
+                                    {/* <button onClick={logOut} className="btn btn-dark fs-6">Logout</button> */}
+                                    <Button onClick={logOut} variant="outlined" color="error">Logout</Button>
                                 </li>
-
                             </ul>
                                 : <ul className="navbar-nav ms-auto">
 
@@ -66,7 +67,7 @@ const Header = () => {
                                 </ul>
                         }
                         <div className="text-center">
-                            <img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
+                            <img className="img-fluid w-25 rounded-circle px-1" src={user?.photoURL} alt="" />
                             <span className="text-light">{user?.displayName}</span>
                         </div>
                     </div>

@@ -1,14 +1,15 @@
 import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
 
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
-    const { user, registerUser, isLoading, authError } = useAuth();
+    const location = useLocation();
+    const { user, registerUser, isLoading, authError, signInWithGoogle } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -24,6 +25,10 @@ const Register = () => {
         }
         registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history)
     }
     return (
         <Container>
@@ -73,6 +78,9 @@ const Register = () => {
                     {isLoading && <CircularProgress />}
                     {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
+
+                    <hr />
+                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                 </Grid>
                 <Grid className="p-4 text-center rounded" item xs={12} md={6}>
                     <img className="img-fluid w-100" src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" />

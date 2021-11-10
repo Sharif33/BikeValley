@@ -58,7 +58,6 @@ const LogIn = () => {
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
-
                     <hr />
                     <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                 </Grid>

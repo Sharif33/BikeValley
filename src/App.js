@@ -5,7 +5,7 @@ import PrivateRoute from './LogIn/PrivateRoute/PrivateRoute';
 import Register from './LogIn/Register/Register';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
-import Bikes from './Pages/Home/Bikes/Bikes';
+import ExploreBikes from './Pages/Home/ExploreBikes/ExploreBikes';
 import Home from './Pages/Home/Home/Home';
 import SingleBike from './Pages/Home/SingleBike/SingleBike';
 import NotFound from './Pages/NotFound/NotFound';
@@ -28,7 +28,7 @@ function App() {
             <AboutUs></AboutUs>
           </Route>
           <Route exact path="/bikes">
-            <Bikes></Bikes>
+            <ExploreBikes></ExploreBikes>
           </Route>
           <PrivateRoute exact path="/bike/:id">
             <SingleBike></SingleBike>

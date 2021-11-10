@@ -23,7 +23,7 @@ const Bikes = () => {
                         <CircularProgress />
                     </div>
                     :
-                    bikes.map(bike => <Bike
+                    bikes.slice(0, 6).map(bike => <Bike
                         key={bike._id}
                         bike={bike}
                     >
