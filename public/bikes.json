@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1001,
+        "name": "Royal Enfield Continental GT 650",
+        "rating": 5.0,
+        "reviews": 9622,
+        "price": 378989,
+        "contact": "+880 12 34",
+        "keySpecs": " Downtown Myrtle Beach, Myrtle Beach",
+        "description": "Royal Enfield Continental GT 650 is a cafe racer bike available at a starting price of Rs. 2,97,006 in India. It is available in 3 variants and 5 colours with top variant price starting from Rs. 3,19,143. The Royal Enfield Continental GT 650 is powered by 648cc BS6 engine which develops a power of 47 bhp and a torque of 52 Nm. With both front and rear disc brakes, Royal Enfield Continental GT 650 comes up with anti-locking braking system. This Continental GT 650 bike weighs 198 kg and has a fuel tank capacity of 12.5 liters",
+        "image": "https://i.ibb.co/KF5x992/royal-enfield-continental-gt-650-standard-bs-vi20200212182221.jpg"
+    },
+    {
+        "id": 1002,
+        "name": "Royal Enfield Meteor 350",
+        "rating": 5.0,
+        "reviews": 6425,
+        "price": 356873,
+        "contact": "+880 12 34",
+        "keySpecs": "349cc, 35kmpl, 20.2bhp, 191kg",
+        "description": "Royal Enfield Meteor 350 is a cruiser bike available at a starting price of Rs. 1,98,481 in India. It is available in 3 variants and 7 colours with top variant price starting from Rs. 2,14,454. The Royal Enfield Meteor 350 is powered by 349cc BS6 engine which develops a power of 20.2 bhp and a torque of 27 Nm. With both front and rear disc brakes, Royal Enfield Meteor 350 comes up with anti-locking braking system. This Meteor 350 bike weighs 191 kg and has a fuel tank capacity of 15 liters.",
+        "image": "https://i.ibb.co/FkQYjs3/royal-enfield-meteor-350-fireball20201106124644.jpg"
+    },
+    {
+        "id": 1003,
+        "name": "Honda SP 125",
+        "rating": 5.0,
+        "reviews": 6430,
+        "price": 169029,
+        "contact": "+880 12 34",
+        "keySpecs": "124cc, 65kmpl, 10.72bhp, 117kg ",
+        "description": "Honda SP 125 is a mileage bike available at a starting price of Rs. 78,810 in India. It is available in 2 variants and 4 colours with top variant price starting from Rs. 83,099. The Honda SP 125 is powered by 124cc BS6 engine which develops a power of 10.72 bhp and a torque of 10.9 Nm. With both front and rear drum brakes, Honda SP 125 comes up with combined braking system of both wheels. This SP 125 bike weighs 117 kg and has a fuel tank capacity of 11 liters.",
+        "image": "https://i.ibb.co/wLKqRPW/sp-125-right-front-three-quarter-2.jpg"
+    },
+    {
+        "id": 1004,
+        "name": "Suzuki Intruder 150",
+        "rating": 5.0,
+        "reviews": 7325,
+        "price": 186070,
+        "contact": "+880 12 34",
+        "keySpecs": " 155cc, 42mpl, 13.4bhp, 152kg",
+        "description": "Suzuki Intruder 150 is a cruiser bike available at a starting price of Rs. 1,28,659 in India. It is available in only 1 variant and 3 colours. The Suzuki Intruder 150 is powered by 155cc BS6 engine which develops a power of 13.4 bhp and a torque of 13.8 Nm. With both front and rear disc brakes, Suzuki Intruder 150 comes up with anti-locking braking system. This Intruder 150 bike weighs 152 kg and has a fuel tank capacity of 11 liters.",
+        "image": "https://i.ibb.co/qrbfzyV/suzuki-intruder-150-standard-bs-vi20200320182536.jpg"
+    },
+    {
+        "id": 1005,
+        "name": "Triumph Rocket 3",
+        "rating": 5.0,
+        "reviews": 3527,
+        "price": 3655902,
+        "contact": "+880 12 34",
+        "keySpecs": "2458cc, 165bhp, 304kg",
+        "description": "Triumph Rocket 3 is a cruiser bike available at a starting price of Rs. 18,41,994 in India. It is available in 2 variants and 4 colours with top variant price starting from Rs. 18,82,701. The Triumph Rocket 3 is powered by 2458cc BS6 engine which develops a power of 165 bhp and a torque of 221 Nm. With both front and rear disc brakes, Triumph Rocket 3 comes up with anti-locking braking system. This Rocket 3 bike weighs 304 kg and has a fuel tank capacity of 18 liters.",
+        "image": "https://i.ibb.co/Pt5DH51/triumph-rocket-3-2020-r20190802133947.jpg"
+    },
+    {
+        "id": 1006,
+        "name": "TVS Apache RTR 160",
+        "rating": 5.0,
+        "reviews": 7432,
+        "price": 151557,
+        "contact": "+880 12 34",
+        "keySpecs": "159.7cc, 45mpl, 15.31bhp, 139kg",
+        "description": "TVS Apache RTR 160 is a street bike available at a starting price of Rs. 1,07,242 in India. It is available in 2 variants and 6 colours with top variant price starting from Rs. 1,10,243. The TVS Apache RTR 160 is powered by 159.7cc BS6 engine which develops a power of 15.31 bhp and a torque of 13.9 Nm. With front disc and rear drum brakes, TVS Apache RTR 160 comes up with anti-locking braking system. This Apache RTR 160 bike weighs 139 kg and has a fuel tank capacity of 12 liters.",
+        "image": "https://i.ibb.co/1b3RZWr/tvs-apache-rtr-160-front-disc-abs-bs-vi20200122150111.jpg"
+    },
+    {
+        "id": 1007,
+        "name": "BMW R Nine T Scrambler",
+        "rating": 5.0,
+        "reviews": 8221,
+        "price": 2529337,
+        "contact": "+880 12 34",
+        "keySpecs": "1170cc, 107.28bhp, 223kg",
+        "description": "BMW R Nine T Scrambler is a bike available at a starting price of Rs. 16,76,714 in India. It is available in only 1 variant and 4 colours. The BMW R Nine T Scrambler is powered by 1170cc BS6 engine which develops a power of 107.28 bhp and a torque of 116 Nm. With both front and rear disc brakes, BMW R Nine T Scrambler comes up with anti-locking braking system. This R Nine T Scrambler bike weighs 223 kg and has a fuel tank capacity of 17 liters.",
+        "image": "https://i.ibb.co/1sXtHnH/bmw-r-nine-t-scrambler-standard20200731231100.jpg"
+    },
+    {
+        "id": 1008,
+        "name": "Bajaj Pulsar F250",
+        "rating": 5.0,
+        "reviews": 33,
+        "price": 231274,
+        "contact": "+880 12 34",
+        "keySpecs": "249.07cc, 24.1bhp, 164kg",
+        "description": "Bajaj Pulsar F250 is a street bike available at a starting price of Rs. 1,40,000 in India. It is available in only 1 variant and 2 colours. The Bajaj Pulsar F250 is powered by 249.07cc BS6 engine which develops a power of 24.1 bhp and a torque of 21.5 Nm. With both front and rear disc brakes, Bajaj Pulsar F250 comes up with anti-locking braking system. This Pulsar F250 bike weighs 164 kg and has a fuel tank capacity of 14 liters.",
+        "image": "https://i.ibb.co/p42F9VC/f250.jpg"
+    },
+    {
+        "id": 1009,
+        "name": "Harley-Davidson PAN America 1250",
+        "rating": 5.0,
+        "reviews": 33,
+        "price": 3231721,
+        "contact": "+880 12 34",
+        "keySpecs": "1252cc, 150.19bhp, 258kg",
+        "description": "Harley-Davidson PAN America 1250 is a adventure bike available at a starting price of Rs. 16,90,000 in India. It is available in 2 variants and 6 colours with top variant price starting from Rs. 19,99,000. The Harley-Davidson PAN America 1250 is powered by 1252cc BS6 engine which develops a power of 150.19 bhp and a torque of 128 Nm. With both front and rear disc brakes, Harley-Davidson PAN America 1250 comes up with anti-locking braking system. This PAN America 1250 bike weighs 258 kg and has a fuel tank capacity of 21.2 liters.",
+        "image": "https://i.ibb.co/SVbK3fV/harleydavidson-pan-america-1250-standard20210428144842.jpg"
+    },
+    {
+        "id": 1010,
+        "name": "Hero Splendor Plus",
+        "rating": 5.0,
+        "reviews": 33,
+        "price": 101721,
+        "contact": "+880 12 34",
+        "keySpecs": "97.2cc, 62mpl, 7.91bhp, 110kg",
+        "description": "Hero Splendor Plus is a commuter bike available at a starting price of Rs. 63,499 in India. It is available in 5 variants and 8 colours with top variant price starting from Rs. 69,095. The Hero Splendor Plus is powered by 97.2cc BS6 engine which develops a power of 7.91 bhp and a torque of 8.05 Nm. With both front and rear drum brakes, Hero Splendor Plus comes up with combined braking system of both wheels. This Splendor Plus bike weighs 110 kg and has a fuel tank capacity of 9.8 liters.",
+        "image": "https://i.ibb.co/vYvQKYg/hero-splendor-plus-kick-alloy-bs-vi20200214191452.jpg"
+    },
+    {
+        "id": 1011,
+        "name": "Husqvarna Vitpilen 250",
+        "rating": 5.0,
+        "reviews": 33,
+        "price": 331721,
+        "contact": "+880 12 34",
+        "keySpecs": "248.76cc, 26.63bhp, 32kmpl, 166kg",
+        "description": "Husqvarna Vitpilen 250 is a cafe racer bike available at a starting price of Rs. 2,09,753 in India. It is available in only 1 variant and 1 colour. The Husqvarna Vitpilen 250 is powered by 248.76cc BS6 engine which develops a power of 29.63 bhp and a torque of 24 Nm. With both front and rear disc brakes, Husqvarna Vitpilen 250 comes up with anti-locking braking system. This Vitpilen 250 bike weighs 166 kg and has a fuel tank capacity of 9.5 liters.",
+        "image": "https://i.ibb.co/rkbhVVD/husqvarna-vitpilen-250-standard20200225140033.jpg"
+    },
+    {
+        "id": 1012,
+        "name": "Royal Enfield Classic 350",
+        "rating": 5.0,
+        "reviews": 33,
+        "price": 331721,
+        "contact": "+880 12 34",
+        "keySpecs": "349cc, 35kmpl, 20.2bhp, 195kg",
+        "description": "Royal Enfield Classic 350 is a cruiser bike available at a starting price of Rs. 1,84,374 in India. It is available in 5 variants and 11 colours with top variant price starting from Rs. 2,15,118. The Royal Enfield Classic 350 is powered by 349cc BS6 engine which develops a power of 20.2 bhp and a torque of 27 Nm. With both front and rear disc brakes, Royal Enfield Classic 350 comes up with anti-locking braking system. This Classic 350 bike weighs 195 kg and has a fuel tank capacity of 13 liters.",
+        "image": "https://i.ibb.co/wWrwtDm/royalenfield-classic-350-2021-redditch-single-channel-abs.png"
+    }
+]
