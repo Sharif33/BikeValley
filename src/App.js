@@ -5,6 +5,7 @@ import PrivateRoute from './LogIn/PrivateRoute/PrivateRoute';
 import Register from './LogIn/Register/Register';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import Review from './Pages/Dashboard/Review/Review';
 import ExploreBikes from './Pages/Home/ExploreBikes/ExploreBikes';
 import Home from './Pages/Home/Home/Home';
 import SingleBike from './Pages/Home/SingleBike/SingleBike';
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <PrivateRoute exact path="/bike/:id">
             <SingleBike></SingleBike>
+          </PrivateRoute>
+          <PrivateRoute path="/reviews">
+            <Review></Review>
           </PrivateRoute>
           <Route exact path="/contact">
             <ContactUs></ContactUs>
