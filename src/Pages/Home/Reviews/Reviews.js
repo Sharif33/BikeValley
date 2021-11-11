@@ -1,3 +1,4 @@
+
 import { Rating } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
@@ -15,7 +16,7 @@ const Reviews = () => {
             <div className="row row-cols-1 row-cols-md-4">
                 {
                     reviews?.map(review =>
-                        <div key={review._id} className="col">
+                        <div key={review._id} className="col my-4">
                             <div className="text-center border bg-white shadow px-1">
                                 <img className="img-fluid w-25 rounded-circle" style={{ marginTop: "-2.2rem" }} src={review?.image} alt="" />
                                 <h6>{review?.name}</h6>

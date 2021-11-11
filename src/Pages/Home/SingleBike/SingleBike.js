@@ -71,7 +71,7 @@ const SingleBike = () => {
                                             <input defaultValue={bikes?.name} readOnly {...register("bike", { required: true })} />
                                             {errors.resort && <span className="text-warning">This field is required. </span>}
                                             <input defaultValue={bikes?.price} readOnly {...register("price")} />
-                                            <input defaultValue="Pending..." readOnly {...register("status")} />
+                                            <input defaultValue="Pending..." readOnly hidden {...register("status")} />
                                             <input defaultValue={user?.displayName} readOnly {...register("name")} />
                                             <input defaultValue={user?.email} readOnly {...register("email", { required: true })} />
                                             {errors.email && <span className="text-warning">This field is required.</span>}
@@ -81,7 +81,7 @@ const SingleBike = () => {
                                             {errors.phone && <span className="text-warning">This field is required.</span>}
                                             <input defaultValue={date} type="date" {...register("date", { required: true })} />
                                             {errors.date && <span className="text-warning">This field is required.</span>}
-                                            <input defaultValue={bikes?.image} readOnly {...register("image", { required: true })} />
+                                            <input defaultValue={bikes?.image} hidden readOnly {...register("image", { required: true })} />
                                             {errors.image && <span className="text-warning">This field is required.</span>}
                                             <Button type="submit" variant="contained">buy</Button>
 

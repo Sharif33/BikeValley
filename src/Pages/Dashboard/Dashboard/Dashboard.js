@@ -7,12 +7,7 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
-// import ListItem from '@mui/material/ListItem';
-// import ListItemIcon from '@mui/material/ListItemIcon';
-// import ListItemText from '@mui/material/ListItemText';
-// import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -22,7 +17,7 @@ import {
     Link,
     useRouteMatch
 } from "react-router-dom";
-import { Button } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import useAuth from '../../../Hooks/useAuth/useAuth';
 import MyOrders from '../MyOrders/MyOrders';
 import AdminRoute from '../../../LogIn/AdminRoute/AdminRoute';
@@ -31,6 +26,7 @@ import AddBike from '../AddBike/AddBike';
 import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
 import { Logout } from '@mui/icons-material';
+import ManageOrder from '../AllOrders/ManageOrder';
 
 const drawerWidth = 200;
 
@@ -38,7 +34,7 @@ function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { user, logOut, admin } = useAuth();
+    const { user, logOut, admin, isLoading } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -61,6 +57,7 @@ function Dashboard(props) {
                     <Button onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
                 </Box>
             }
+            {isLoading && <CircularProgress />}
             <Divider />
             <Box sx={{ px: 2 }} >
                 <List>
@@ -78,25 +75,19 @@ function Dashboard(props) {
             </Box>
 
             {
-                admin && <Box>
+                admin && <Box sx={{ px: 2 }}>
                     <List>
                         <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                    </List>
+                    <List>
+                        <Link to={`${url}/manageOrder`}><Button color="inherit">All Orders</Button></Link>
                     </List>
                     <List>
                         <Link to={`${url}/addBike`}><Button color="inherit">Add Bike</Button></Link>
                     </List>
                 </Box>
             }
-            {/* <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List> */}
+
         </div>
     );
 
@@ -138,7 +129,7 @@ function Dashboard(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
@@ -177,6 +168,9 @@ function Dashboard(props) {
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
+                    <AdminRoute path={`${path}/manageOrder`}>
+                        <ManageOrder></ManageOrder>
+                    </AdminRoute>
                     <AdminRoute path={`${path}/addBike`}>
                         <AddBike></AddBike>
                     </AdminRoute>
@@ -188,10 +182,6 @@ function Dashboard(props) {
 }
 
 Dashboard.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
 };
 

@@ -23,17 +23,17 @@ const Review = () => {
     return (
         <div>
             <Reviews></Reviews>
-            <div className="add-resort p-4 col-md-6 mx-auto">
+            <div className="add-bikes p-4 col-md-6 mx-auto">
                 <div className="shadow p-4 bg-custom rounded">
                     <h2 className="py-2">Please Add a Review</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input className="w-100 m-2 p-2 rounded" defaultValue={user?.displayName} {...register("name")} />
-                        <input className="w-100 m-2 p-2 rounded" defaultValue={user?.email} {...register("email")} />
-                        <input className="w-100 m-2 p-2 rounded" defaultValue={user?.photoURL} {...register("image")} />
-                        <input className="w-100 m-2 p-2 rounded" type="number" {...register("rating")} placeholder="Rating" />
-                        <input className="w-100 m-2 p-2 rounded" {...register("bike")} placeholder="Bike name" />
-                        <textarea className="w-100 m-2 p-2 rounded" {...register("description")} placeholder="Review" />
-                        <Button type="submit" variant="outlined">Submit</Button>
+                        <input className=" rounded" readOnly defaultValue={user?.displayName} {...register("name")} />
+                        <input className=" rounded" readOnly defaultValue={user?.email} {...register("email")} />
+                        <input className=" rounded" hidden defaultValue={user?.photoURL} {...register("image")} />
+                        <input className=" rounded" type="number" {...register("rating")} placeholder="Rating" />
+                        <input className=" rounded" {...register("bike")} placeholder="Bike name" />
+                        <textarea className=" rounded" {...register("description")} placeholder="Review" />
+                        <Button sx={{ w: 1 }} type="submit" variant="contained">Submit</Button>
                     </form>
                 </div>
             </div>
