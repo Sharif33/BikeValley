@@ -5,14 +5,14 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch(`http://localhost:5000/reviews`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
 
     return (
         <div className="container my-5 p-5 shadow bg-light rounded">
-            <div className="row row-cols-md-4">
+            <div className="row row-cols-1 row-cols-md-4">
                 {
                     reviews?.map(review =>
                         <div key={review._id} className="col">
