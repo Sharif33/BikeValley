@@ -16,7 +16,7 @@ const Header = () => {
     };
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: "#223A5E" }}>
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "#223A5E" }}>
                 <div className="container">
                     <NavLink className="navbar-brand fw-bold fs-2" to="/home"><span className="text-warning fs-4">Bike</span> <span>Valley</span></NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../../Hooks/useAuth/useAuth';
+import Header from '../../../Shared/Header/Header';
 import "./SingleBike.css";
 
 const SingleBike = () => {
@@ -41,6 +42,7 @@ const SingleBike = () => {
 
     return (
         <div>
+            <Header></Header>
             <img style={{ height: "30rem" }} className='w-100 img-fluid' src={bikes?.image} alt="" />
             <div className='container py-5'>
                 <div className="row">
@@ -66,7 +68,7 @@ const SingleBike = () => {
                                 <div>
                                     {
                                         bikes?.name && <form onSubmit={handleSubmit(onSubmit)}>
-                                            <input defaultValue={bikes?.name} readOnly {...register("resort", { required: true })} />
+                                            <input defaultValue={bikes?.name} readOnly {...register("bike", { required: true })} />
                                             {errors.resort && <span className="text-warning">This field is required. </span>}
                                             <input defaultValue={bikes?.price} readOnly {...register("price")} />
                                             <input defaultValue="Pending..." readOnly {...register("status")} />

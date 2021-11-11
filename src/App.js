@@ -12,13 +12,11 @@ import Home from './Pages/Home/Home/Home';
 import SingleBike from './Pages/Home/SingleBike/SingleBike';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Shared/Footer/Footer';
-import Header from './Shared/Header/Header';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Header></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>

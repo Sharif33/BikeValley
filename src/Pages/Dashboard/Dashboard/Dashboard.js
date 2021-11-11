@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 // import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 // import ListItem from '@mui/material/ListItem';
@@ -27,6 +28,9 @@ import MyOrders from '../MyOrders/MyOrders';
 import AdminRoute from '../../../LogIn/AdminRoute/AdminRoute';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddBike from '../AddBike/AddBike';
+import Pay from '../Pay/Pay';
+import Review from '../Review/Review';
+import { Logout } from '@mui/icons-material';
 
 const drawerWidth = 200;
 
@@ -34,7 +38,7 @@ function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { user, logOut, admin } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -42,9 +46,37 @@ function Dashboard(props) {
     const drawer = (
         <div>
             <Toolbar />
+            {
+                user?.email && <Box sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    '& > :not(style) + :not(style)': {
+                        px: 2,
+                        mb: 1,
+                    },
+                }}>
+                    <img className="img-fluid w-50 rounded-circle px-1" src={user?.photoURL} alt="" />
+                    <h4>{user?.displayName}</h4>
+                    <Button onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
+                </Box>
+            }
             <Divider />
-            <Link to="/"><Button color="inherit">Home</Button></Link>
-            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
+            <Box sx={{ px: 2 }} >
+                <List>
+                    <Link to={`${url}`}><Button color="inherit"><DashboardIcon /> Dashboard</Button></Link>
+                </List>
+                <List>
+                    <Link to={`${url}/reviews`}><Button color="inherit">Review</Button></Link>
+                </List>
+                <List>
+                    <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
+                </List>
+                <List>
+                    <Link to="/"><Button color="inherit">Home</Button></Link>
+                </List>
+            </Box>
+
             {
                 admin && <Box>
                     <List>
@@ -135,6 +167,12 @@ function Dashboard(props) {
                 <Switch>
                     <Route exact path={path}>
                         <MyOrders></MyOrders>
+                    </Route>
+                    <Route path={`${path}/reviews`}>
+                        <Review></Review>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay></Pay>
                     </Route>
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
