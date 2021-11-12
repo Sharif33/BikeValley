@@ -27,6 +27,8 @@ import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
 import { Logout } from '@mui/icons-material';
 import ManageOrder from '../AllOrders/ManageOrder';
+import DashboardHome from './DashboardHome';
+import ManageProducts from '../ManageProducts/ManageProducts';
 
 const drawerWidth = 200;
 
@@ -35,6 +37,7 @@ function Dashboard(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
     const { user, logOut, admin, isLoading } = useAuth();
+    if (isLoading) { return <CircularProgress /> }
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -57,11 +60,14 @@ function Dashboard(props) {
                     <Button onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
                 </Box>
             }
-            {isLoading && <CircularProgress />}
+
             <Divider />
             <Box sx={{ px: 2 }} >
                 <List>
                     <Link to={`${url}`}><Button color="inherit"><DashboardIcon /> Dashboard</Button></Link>
+                </List>
+                <List>
+                    <Link to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
                 </List>
                 <List>
                     <Link to={`${url}/reviews`}><Button color="inherit">Review</Button></Link>
@@ -74,10 +80,15 @@ function Dashboard(props) {
                 </List>
             </Box>
 
+            {/* {admin && isLoading && <CircularProgress />} */}
+
             {
                 admin && <Box sx={{ px: 2 }}>
                     <List>
                         <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                    </List>
+                    <List>
+                        <Link to={`${url}/manageProducts`}><Button color="inherit">Manage Products</Button></Link>
                     </List>
                     <List>
                         <Link to={`${url}/manageOrder`}><Button color="inherit">All Orders</Button></Link>
@@ -157,6 +168,9 @@ function Dashboard(props) {
 
                 <Switch>
                     <Route exact path={path}>
+                        <DashboardHome></DashboardHome>
+                    </Route>
+                    <Route path={`${path}/myOrders`}>
                         <MyOrders></MyOrders>
                     </Route>
                     <Route path={`${path}/reviews`}>
@@ -167,6 +181,9 @@ function Dashboard(props) {
                     </Route>
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageProducts`}>
+                        <ManageProducts></ManageProducts>
                     </AdminRoute>
                     <AdminRoute path={`${path}/manageOrder`}>
                         <ManageOrder></ManageOrder>

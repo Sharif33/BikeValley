@@ -22,9 +22,9 @@ const ManageOrder = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('Canceled successfully');
-                        console.log(data);
+                        // console.log(data);
                         const remainingOrders = orders.filter(order => order._id !== id);
-                        console.log(remainingOrders);
+                        // console.log(remainingOrders);
                         setOrders(remainingOrders);
                     }
                 })

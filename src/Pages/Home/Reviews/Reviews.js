@@ -20,7 +20,7 @@ const Reviews = () => {
                             <div className="text-center border bg-white shadow px-1">
                                 <img className="img-fluid w-25 rounded-circle" style={{ marginTop: "-2.2rem" }} src={review?.image} alt="" />
                                 <h6>{review?.name}</h6>
-                                <Rating name="read-only" size="small" value={review?.rating} readOnly />
+                                <Rating name="half-rating-read" precision={0.5} size="small" value={Number(review?.rating)} readOnly />
                                 <h6>{review?.bike}</h6>
                                 <p className="text-secondary">{review?.description}</p>
                             </div>
