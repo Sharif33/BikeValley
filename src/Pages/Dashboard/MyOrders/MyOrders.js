@@ -66,7 +66,7 @@ const MyOrders = () => {
                                     <h6>Order Date : <span className="text-secondary"> {order?.date} </span></h6>
                                     <h6>Price: <span className="text-danger">{order?.price} BDT</span> </h6>
                                     <img className="img-fluid" style={{ height: "15rem" }} src={order?.image} alt="" />
-                                    <h6>{order?.bike}</h6>
+                                    <h6 className="text-center">{order?.bike}</h6>
                                 </div>
                                 <div className="d-flex justify-content-between">
                                     <button className="btn btn-outline-info">{order?.status}</button>

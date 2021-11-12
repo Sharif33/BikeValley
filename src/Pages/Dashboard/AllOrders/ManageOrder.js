@@ -43,7 +43,7 @@ const ManageOrder = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">{order.resort}</h5>
+                                        <small className="card-title text-success">{order?.bike}</small>
                                         <p className="card-text">Ordered by : <span>{order.name}</span></p>
                                         <p>Email: {order.email}</p>
                                         <p>Ordered date: {order.date}</p>

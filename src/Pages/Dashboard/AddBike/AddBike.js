@@ -21,7 +21,7 @@ const AddBike = () => {
     return (
         <div className="add-bikes p-4 col-md-6 mx-auto">
             <div className="shadow p-4 rounded bg-custom">
-                <h2 className="text-light py-2">Please Add a Bike</h2>
+                <h3 className="text-custom">Add A Bike</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("name", { required: true, maxLength: 100 })} placeholder="Name" />
                     <input {...register("keySpecs", { required: true, maxLength: 100 })} placeholder="Key Specification" />
@@ -29,10 +29,10 @@ const AddBike = () => {
                     <input type="number" {...register("id")} placeholder="ID" />
                     <input type="number" {...register("contact")} placeholder="Phone Number" />
                     <input type="number" {...register("price")} placeholder="Price" />
-                    <input type="number" {...register("rating")} placeholder="Rating" />
+                    <input type="number" step="0.1" min='1' max='5' {...register("rating")} placeholder="Rating" />
                     <input type="number" {...register("reviews")} placeholder="Reviews" />
                     <input {...register("image")} placeholder="image url" />
-                    <input className="btn btn-dark" type="submit" />
+                    <input className="btn btn-primary" type="submit" />
                 </form>
             </div>
         </div>

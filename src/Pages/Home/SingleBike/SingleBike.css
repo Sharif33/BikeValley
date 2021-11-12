@@ -7,8 +7,17 @@
 .add-bikes form input, textarea{
     width: 100%;
     margin-bottom: 10px;
+    border-radius: 4px;
 }
 
 .bg-custom{
-    background-image: linear-gradient(55deg,#4f46e5,#818CF8,#8B5CF6);
+    background-color: #0e101c;
 }
+
+.text-custom {
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(79, 98, 148);
+  }

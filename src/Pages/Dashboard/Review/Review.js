@@ -25,15 +25,15 @@ const Review = () => {
             <Reviews></Reviews>
             <div className="add-bikes p-4 col-md-6 mx-auto">
                 <div className="shadow p-4 bg-custom rounded">
-                    <h2 className="py-2">Please Add a Review</h2>
+                    <h3 className="text-custom">Please Add a Review</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className=" rounded" readOnly defaultValue={user?.displayName} {...register("name")} />
                         <input className=" rounded" readOnly defaultValue={user?.email} {...register("email")} />
                         <input className=" rounded" hidden defaultValue={user?.photoURL} {...register("image")} />
-                        <input className=" rounded" type="number" {...register("rating")} placeholder="Rating" />
+                        <input className=" rounded" type="number" step="0.1" min='1' max='5' {...register("rating")} placeholder="Rating" />
                         <input className=" rounded" {...register("bike")} placeholder="Bike name" />
                         <textarea className=" rounded" {...register("description")} placeholder="Review" />
-                        <Button sx={{ w: 1 }} type="submit" variant="contained">Submit</Button>
+                        <Button sx={{ width: "100%", letterSpacing: 4 }} type="submit" variant="contained">Submit</Button>
                     </form>
                 </div>
             </div>

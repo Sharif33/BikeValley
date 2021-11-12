@@ -11,8 +11,6 @@ import "./SingleBike.css";
 const SingleBike = () => {
     const { user } = useAuth();
 
-    const date = new Date().toLocaleDateString();
-
     const { id } = useParams();
 
     const [bikes, setBikes] = useState([]);
@@ -64,7 +62,7 @@ const SingleBike = () => {
                     <div className="col-md-3 ">
                         <div className="add-bikes">
                             <div className="shadow p-4 bg-custom rounded">
-                                <h3 className="text-light py-2">BUY this bike</h3>
+                                <h3 className="text-custom">BUY this bike</h3>
                                 <div>
                                     {
                                         bikes?.name && <form onSubmit={handleSubmit(onSubmit)}>
@@ -79,7 +77,7 @@ const SingleBike = () => {
                                             <input placeholder="City and Country"  {...register("city")} />
                                             <input placeholder="Phone number"  {...register("phone", { required: true })} />
                                             {errors.phone && <span className="text-warning">This field is required.</span>}
-                                            <input defaultValue={date} type="date" {...register("date", { required: true })} />
+                                            <input defaultValue={new Date()} type="date"  {...register("date", { required: true })} />
                                             {errors.date && <span className="text-warning">This field is required.</span>}
                                             <input defaultValue={bikes?.image} hidden readOnly {...register("image", { required: true })} />
                                             {errors.image && <span className="text-warning">This field is required.</span>}
@@ -92,12 +90,7 @@ const SingleBike = () => {
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
-
-
         </div>
     );
 };
