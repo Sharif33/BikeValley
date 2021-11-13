@@ -17,25 +17,25 @@ const BannerTop = () => {
                     <div className="carousel-item active">
                         <img src={slide} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block ">
-                            <h1 style={{ fontSize: "5em" }}>FIND THE RIGHT BIKE</h1>
+                            <h1 style={{ fontSize: "4em" }}>FIND THE RIGHT BIKE</h1>
                             <p>Get Comprehensive Information on Bike Prices, Specs, Reviews & More!</p>
-                            <Link to="/about"><button className="btn btn-dark px-5">Learn More</button></Link>
+                            <Link to="/about"><button className="btn btn-outline-danger p-3 rounded-pill">Learn More</button></Link>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={slide2} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block ">
-                            <h5 style={{ fontSize: "5em" }}>FIND THE RIGHT BIKE</h5>
+                            <h5 style={{ fontSize: "4em" }}>FIND THE RIGHT BIKE</h5>
                             <p>Get Comprehensive Information on Bike Prices, Specs, Reviews & More!</p>
-                            <Link to="/about"><button className="btn btn-dark px-5">Learn More</button></Link>
+                            <Link to="/about"><button className="btn btn-outline-warning p-3 rounded-pill">Learn More</button></Link>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={slide3} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block ">
-                            <h5 style={{ fontSize: "5em" }}>FIND THE RIGHT BIKE</h5>
+                            <h5 style={{ fontSize: "4em" }}>FIND THE RIGHT BIKE</h5>
                             <p>Get Comprehensive Information on Bike Prices, Specs, Reviews & More!</p>
-                            <Link to="/about"><button className="btn btn-dark px-5">Learn More</button></Link>
+                            <Link to="/about"><button className="btn btn-outline-danger p-3 rounded-pill">Learn More</button></Link>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ import Footer from '../../Shared/Footer/Footer';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div style={{ overflowX: "hidden" }}>
             <Header></Header>
             <img className="img-fluid" src={about} alt="" />
             <div className="container px-5">
@@ -51,8 +51,8 @@ const AboutUs = () => {
 
                 <div className="p-3">
                     <h3>Our Core Values</h3>
-                    <div className="row g-2 overflow-hidden">
-                        <div className="col-6">
+                    <div className="row g-2 text-center">
+                        <div className="col-md-6  col-sm-12">
                             <div style={{ backgroundColor: "#FEF7EF" }} className="">
                                 <div className="d-flex align-items-center">
                                     <img className="img-fluid w-25 p-4" src={respect} alt="" />
@@ -63,7 +63,7 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-md-6  col-sm-12">
                             <div style={{ backgroundColor: "#ECF7F8" }} className="">
                                 <div className="d-flex align-items-center">
                                     <img className="img-fluid w-25 p-4" src={agility} alt="" />
@@ -74,7 +74,7 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-md-6  col-sm-12">
                             <div style={{ backgroundColor: "#ECF7F8" }} className="">
                                 <div className="d-flex align-items-center">
                                     <img className="img-fluid w-25 p-4" src={ownership} alt="" />
@@ -85,7 +85,7 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-md-6  col-sm-12">
                             <div style={{ backgroundColor: "#FEF7EF" }} className="">
                                 <div className="d-flex align-items-center">
                                     <img className="img-fluid w-25 p-4" src={webefore} alt="" />

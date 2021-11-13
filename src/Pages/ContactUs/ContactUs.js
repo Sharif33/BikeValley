@@ -12,20 +12,20 @@ const ContactUs = () => {
                 <h3>Contact Us</h3>
                 <p>Let's bring joy and delight to the process of bike buying together.</p>
                 <div className="row g-2">
-                    <div style={{ backgroundColor: "#ECF7F8" }} className="col-6">
+                    <div style={{ backgroundColor: "#ECF7F8" }} className="col-md-6  col-sm-12">
                         <div className="p-3 ">
                             <h5 className="fw-bold">Customer support: <small className="text-secondary fw-normal"> info123@bikevalley.com</small></h5>
                         </div>
                     </div>
-                    <div style={{ backgroundColor: "#FEF7EF" }} className="col-6">
+                    <div style={{ backgroundColor: "#FEF7EF" }} className="col-md-6  col-sm-12">
                         <div className="p-3 "><h5 className="fw-bold">New Bike Dealer:
                             <small className="text-secondary fw-normal"> info123@bikevalley.com</small></h5></div>
                     </div>
-                    <div style={{ backgroundColor: "#FEF7EF" }} className="col-6">
+                    <div style={{ backgroundColor: "#FEF7EF" }} className="col-md-6  col-sm-12">
                         <div className="p-3 "><h5 className="fw-bold">Enterprise Sales Inquiries:
                             <small className="text-secondary fw-normal"> esteam@bikevalley.com</small></h5></div>
                     </div>
-                    <div style={{ backgroundColor: "#ECF7F8" }} className="col-6">
+                    <div style={{ backgroundColor: "#ECF7F8" }} className="col-md-6  col-sm-12">
                         <div className="p-3 "><h5 className="fw-bold">Adress: <small className="text-secondary fw-normal">BikeValley Trade Limited, Shahid IT Park, Dhaka, Bangladesh</small></h5></div>
                     </div>
                 </div>

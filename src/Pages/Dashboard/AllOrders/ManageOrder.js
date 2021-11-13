@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 const ManageOrder = () => {
 
     const [orders, setOrders] = useState([]);
-    /* const [status, setStatus] = useState("");
+    const [status, setStatus] = useState("");
 
     const handleStatus = (e) => {
         setStatus(e.target.value)
-    } */
+    }
 
     useEffect(() => {
         fetch(`https://stormy-tundra-73783.herokuapp.com/orders`)
@@ -15,17 +15,20 @@ const ManageOrder = () => {
             .then((data) => setOrders(data));
     }, []);
 
-    /*   const handleUpdate = (id) => {
-          const proceed = window.confirm('Are you sure, you want to Update?');
-          if (proceed) {
-              fetch(`https://stormy-tundra-73783.herokuapp.com/orders/${id}`, {
-                  method: "PUT",
-                  headers: { "content-type": "application/json" },
-                  body: JSON.stringify({ status })
-              })
-          }
-  
-      }; */
+    // Update Status
+    const handleUpdate = (id) => {
+        const proceed = window.confirm('Are you sure, you want to Update?');
+        if (proceed) {
+            window.location.reload();
+            fetch(`https://stormy-tundra-73783.herokuapp.com/updateStatus/${id}`, {
+                method: "PUT",
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({ status })
+            })
+        }
+
+    };
+
 
     // DELETE order
     const handleDeleteOrders = id => {
@@ -65,9 +68,12 @@ const ManageOrder = () => {
                                         <p>Email: {order.email}</p>
                                         <p>Ordered date: {order.date}</p>
                                         <div>
-                                            {/* <input onChange={handleStatus} type="text" defaultValue={order?.status} />
-                                            <button onClick={() => handleUpdate(order._id)} className="btn btn-outline-primary">Update</button> */}
-                                            <button onClick={() => handleDeleteOrders(order._id)} className="btn btn-danger">Delete</button></div>
+                                            <input className="w-100 text-center mb-2" onChange={handleStatus} type="text" defaultValue={order?.status} />
+                                            <div className="d-flex justify-content-between">
+                                                <button onClick={() => handleDeleteOrders(order._id)} className="btn btn-danger">Delete</button>
+                                                <button onClick={() => handleUpdate(order._id)} className="btn btn-primary">Click to Shipped</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

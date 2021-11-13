@@ -16,7 +16,7 @@ const Bikes = () => {
     return (
         <div className="container">
             <div className="text-center pt-2">
-                <h2 className="fw-bold">Our top 6 Bikes</h2>
+                <h1 className="fw-bold text-primary p-2">Our top <span className="text-danger">6</span> Bikes</h1>
             </div>
             <div className="row row-cols-1 row-cols-md-3 m-2 g-4">
                 {bikes.length == 0 ?

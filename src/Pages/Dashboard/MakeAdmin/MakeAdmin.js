@@ -1,12 +1,12 @@
 import { Button, TextField, Alert } from '@mui/material';
 import React, { useState } from 'react';
-import useAuth from '../../../Hooks/useAuth/useAuth';
+// import useAuth from '../../../Hooks/useAuth/useAuth';
 
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
     const [success, setSuccess] = useState(false);
-    const { admin } = useAuth();
+    // const { admin } = useAuth();
 
     const handleOnBlur = e => {
         setEmail(e.target.value);
