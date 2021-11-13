@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const [bikes, setBikes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch(`https://stormy-tundra-73783.herokuapp.com/bikes`)
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [])
@@ -22,7 +22,7 @@ const ManageProducts = () => {
     const handleDeleteProducts = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/bikes/${id}`
+            const url = `https://stormy-tundra-73783.herokuapp.com/bikes/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

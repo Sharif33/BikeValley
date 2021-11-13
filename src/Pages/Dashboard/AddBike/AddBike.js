@@ -9,7 +9,7 @@ const AddBike = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/bikes', data)
+        axios.post(`https://stormy-tundra-73783.herokuapp.com/bikes`, data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

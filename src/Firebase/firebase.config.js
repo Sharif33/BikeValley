@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBLu5RN8qOfeJCW2B-fUC7nZI8ja1KRmz0",
-    authDomain: "bike-valley-sharif33.firebaseapp.com",
-    projectId: "bike-valley-sharif33",
-    storageBucket: "bike-valley-sharif33.appspot.com",
-    messagingSenderId: "621809165031",
-    appId: "1:621809165031:web:2176fc8e2f9a8a7475f842"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebaseConfig;

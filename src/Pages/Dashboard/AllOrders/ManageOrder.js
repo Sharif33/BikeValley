@@ -10,7 +10,7 @@ const ManageOrder = () => {
     } */
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://stormy-tundra-73783.herokuapp.com/orders`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
@@ -18,7 +18,7 @@ const ManageOrder = () => {
     /*   const handleUpdate = (id) => {
           const proceed = window.confirm('Are you sure, you want to Update?');
           if (proceed) {
-              fetch(`http://localhost:5000/orders/${id}`, {
+              fetch(`https://stormy-tundra-73783.herokuapp.com/orders/${id}`, {
                   method: "PUT",
                   headers: { "content-type": "application/json" },
                   body: JSON.stringify({ status })
@@ -31,7 +31,7 @@ const ManageOrder = () => {
     const handleDeleteOrders = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://stormy-tundra-73783.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

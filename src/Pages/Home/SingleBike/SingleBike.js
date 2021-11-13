@@ -17,7 +17,7 @@ const SingleBike = () => {
     const [bikes, setBikes] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bikes/${id}`)
+        fetch(`https://stormy-tundra-73783.herokuapp.com/bikes/${id}`)
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [id])
@@ -30,7 +30,7 @@ const SingleBike = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        axios.post(`http://localhost:5000/orders`, data)
+        axios.post(`https://stormy-tundra-73783.herokuapp.com/orders`, data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Purchase successfully.Please Check My Order');

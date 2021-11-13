@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://stormy-tundra-73783.herokuapp.com/myOrders/${email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [email, deleteCount]);
@@ -18,7 +18,7 @@ const MyOrders = () => {
     //Delete Part
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch(`https://stormy-tundra-73783.herokuapp.com/orders`)
             .then(res => res.json())
             .then(data => {
                 setMyOrders(data);
@@ -29,7 +29,7 @@ const MyOrders = () => {
     const handleDeleteOrders = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/myOrders/${id}`
+            const url = `https://stormy-tundra-73783.herokuapp.com/myOrders/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
