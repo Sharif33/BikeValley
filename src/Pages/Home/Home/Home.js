@@ -14,7 +14,7 @@ const Home = () => {
             <BannerMid></BannerMid>
             <Bikes></Bikes>
             <div>
-                <h3 className="text-center py-4">User Review</h3>
+                <h3 className="text-center py-4">Bikers Review</h3>
                 <Reviews></Reviews>
             </div>
             <Footer></Footer>

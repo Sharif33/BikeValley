@@ -10,7 +10,7 @@ import Header from '../../../Shared/Header/Header';
 import "./SingleBike.css";
 
 const SingleBike = () => {
-    const { user } = useAuth();
+    const { user, admin } = useAuth();
 
     const { id } = useParams();
 
@@ -83,7 +83,7 @@ const SingleBike = () => {
                                             {errors.date && <span className="text-warning">This field is required.</span>}
                                             <input defaultValue={bikes?.image} hidden readOnly {...register("image", { required: true })} />
                                             {errors.image && <span className="text-warning">This field is required.</span>}
-                                            <Button type="submit" variant="contained">buy</Button>
+                                            {!admin && <Button type="submit" variant="contained">buy</Button>}
 
                                         </form>
                                     }
