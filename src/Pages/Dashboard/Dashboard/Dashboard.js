@@ -55,19 +55,24 @@ function Dashboard(props) {
                         mb: 1,
                     },
                 }}>
-                    <img className="img-fluid w-50 rounded-circle px-1" src={user?.photoURL} alt="" />
-                    <h4>{user?.displayName}</h4>
+                    <Box sx={{ display: 'block' }}>
+                        <img className="img-fluid px-3 w-50 rounded-circle mx-auto" src={user?.photoURL} alt="" />
+                        <h5>{user?.displayName}</h5>
+                    </Box>
                     <Button onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
                 </Box>
             }
 
             <Divider />
+
             <Box sx={{ px: 2 }} >
                 <List>
                     <Link to={`${url}`}><Button color="inherit"><DashboardIcon /> Dashboard</Button></Link>
                 </List>
+            </Box>
+            {!admin && <Box sx={{ px: 2 }} >
                 <List>
-                    <Link to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
+                    <Link style={{ textDecoration: "none" }} to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
                 </List>
                 <List>
                     <Link to={`${url}/reviews`}><Button color="inherit">Review</Button></Link>
@@ -75,10 +80,7 @@ function Dashboard(props) {
                 <List>
                     <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
                 </List>
-                <List>
-                    <Link to="/"><Button color="inherit">Home</Button></Link>
-                </List>
-            </Box>
+            </Box>}
 
             {/* {admin && isLoading && <CircularProgress />} */}
 
@@ -98,6 +100,12 @@ function Dashboard(props) {
                     </List>
                 </Box>
             }
+
+            <Box sx={{ px: 2 }} >
+                <List>
+                    <Link to="/"><Button color="inherit">Home</Button></Link>
+                </List>
+            </Box>
 
         </div>
     );
@@ -162,7 +170,7 @@ function Dashboard(props) {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
 

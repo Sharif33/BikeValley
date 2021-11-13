@@ -1,0 +1,9 @@
+.bg-welcome{
+    background-image: url("https://i.ibb.co/QKMkyv5/price-specs-bg.png"),linear-gradient(-225deg,rgba(23,13,177,.7)35%,rgba(236,50,87,.7)100%);
+    
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

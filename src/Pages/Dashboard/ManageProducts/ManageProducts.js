@@ -42,11 +42,11 @@ const ManageProducts = () => {
     return (
         <div>
             <TableContainer component={Paper}>
-                <Table sx={{}} aria-label="Appointments table">
+                <Table stickyHeader sx={{}} aria-label="Manage Products table">
                     <TableHead>
                         <TableRow>
                             <TableCell>Name</TableCell>
-                            <TableCell align="right">Time</TableCell>
+                            <TableCell align="right">Price</TableCell>
                             <TableCell align="right">ID</TableCell>
                             <TableCell align="right">Action</TableCell>
                         </TableRow>
@@ -62,7 +62,7 @@ const ManageProducts = () => {
                                 </TableCell>
                                 <TableCell align="right">{bike.price}</TableCell>
                                 <TableCell align="right">{bike.id}</TableCell>
-                                <TableCell align="right"><div><button className="btn btn-outline-primary">Update</button> <button onClick={() => handleDeleteProducts(bike._id)} className="btn btn-danger">Delete</button></div></TableCell>
+                                <TableCell align="right"><button onClick={() => handleDeleteProducts(bike._id)} className="btn btn-danger">Delete</button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
