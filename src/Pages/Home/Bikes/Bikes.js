@@ -1,5 +1,6 @@
 import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Bike from '../Bike/Bike';
 
@@ -15,7 +16,7 @@ const Bikes = () => {
     return (
         <div className="container">
             <div className="text-center pt-2">
-                <h2 className="fw-bold">Best Bikes</h2>
+                <h2 className="fw-bold">Our top 6 Bikes</h2>
             </div>
             <div className="row row-cols-1 row-cols-md-3 m-2 g-4">
                 {bikes.length == 0 ?
@@ -29,6 +30,9 @@ const Bikes = () => {
                     >
                     </Bike>)
                 }
+            </div>
+            <div className="text-center pt-4">
+                <Link to="/bikes"><button className="btn btn-outline-primary p-3 rounded-pill">View More</button></Link>
             </div>
         </div>
     );

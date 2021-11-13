@@ -11,7 +11,6 @@ import ExploreBikes from './Pages/Home/ExploreBikes/ExploreBikes';
 import Home from './Pages/Home/Home/Home';
 import SingleBike from './Pages/Home/SingleBike/SingleBike';
 import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Shared/Footer/Footer';
 
 function App() {
   return (
@@ -42,15 +41,6 @@ function App() {
           <Route exact path="/contact">
             <ContactUs></ContactUs>
           </Route>
-          {/* <PrivateRoute exact path="/myOrders">
-        <MyOrders></MyOrders>
-      </PrivateRoute>
-      <PrivateRoute exact path="/addResort">
-        <AddResort></AddResort>
-      </PrivateRoute>
-      <PrivateRoute exact path="/manageOrder">
-        <ManageOrder></ManageOrder>
-      </PrivateRoute> */}
           <Route exact path="/login">
             <LogIn></LogIn>
           </Route>
@@ -61,7 +51,6 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
-        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

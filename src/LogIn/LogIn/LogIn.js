@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
 import Header from '../../Shared/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
 
 const LogIn = () => {
     const [loginData, setLoginData] = useState({});
@@ -69,6 +70,7 @@ const LogIn = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer></Footer>
         </>
     );
 };

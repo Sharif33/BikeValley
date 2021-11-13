@@ -12,11 +12,11 @@ import bm10 from "../../../Images/yamaha.jpg"
 
 const BannerMid = () => {
     return (
-        <div className="shadow">
+        <div className="">
             <div className="container mx-auto text-center p-4 mb-3">
                 <h3 className="">Choose your Brand</h3>
-                <p>Here is our top brands</p>
-                <div className="row row-cols-md-5 row-cols-2 container">
+                <p>to explore more bikes</p>
+                <div className="row row-cols-md-5 row-cols-2 rounded bg-light p-4">
                     <div className="col p-2">
                         <img className="img-fluid  w-75" src={bm1} alt="" />
                     </div>

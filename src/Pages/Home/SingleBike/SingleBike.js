@@ -1,10 +1,11 @@
-import { Button } from '@mui/material';
-// import { Box } from '@mui/system';
+import { Button, Rating } from '@mui/material';
+import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../../Hooks/useAuth/useAuth';
+import Footer from '../../../Shared/Footer/Footer';
 import Header from '../../../Shared/Header/Header';
 import "./SingleBike.css";
 
@@ -47,13 +48,14 @@ const SingleBike = () => {
                     <div className="col-md-9">
                         <h3 style={{ color: "#62599F" }}>{bikes?.name}</h3>
                         <h5 className="text-decoration-underline" style={{ color: "#005562" }}>{bikes?.keySpecs}</h5>
+                        <Box sx={{
+                            '& > legend': { mt: 2 },
+                        }}>
+                            <Rating name="half-rating-read" precision={0.5} size="small" value={Number(bikes?.rating)} readOnly /><span className="text-secondary">({bikes?.reviews}) bikers review this Bike</span>
+                        </Box>
                         <div className=" d-flex justify-contenet-between align-items-center">
-                            <h4 className="w-100 py-3">Price: <span className="text-danger fw-bold">{bikes?.price} BDT</span> <span className="fs-6 ">(taxes and vates included)</span></h4>
-                            {/* <Box sx={{
-                                '& > legend': { mt: 2 },
-                            }}>
-                                <Rating name="size-small, read-only" size="small" readOnly value={bikes?.rating} />  <span>({bikes?.reviews})</span>
-                            </Box> */}
+                            <h4 className="w-100 py-3">Price: <span className="text-danger fw-bold">{bikes?.price} BDT</span> <span className="fs-6 ">(taxe included)</span></h4>
+                            <h5 className="w-100 text-end">Phone: {bikes?.contact}</h5>
 
                         </div>
                         <p>{bikes?.description}</p>
@@ -91,6 +93,7 @@ const SingleBike = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

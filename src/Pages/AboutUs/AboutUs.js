@@ -7,6 +7,7 @@ import respect from '../../Images/icon-respect.svg';
 import agility from '../../Images/icon-agile.svg';
 import ownership from '../../Images/icon-ownership.svg';
 import webefore from '../../Images/icon-we-before-i.svg';
+import Footer from '../../Shared/Footer/Footer';
 
 const AboutUs = () => {
     return (
@@ -98,6 +99,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

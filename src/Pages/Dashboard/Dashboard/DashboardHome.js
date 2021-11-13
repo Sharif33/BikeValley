@@ -1,6 +1,7 @@
 import React from 'react';
 import useAuth from '../../../Hooks/useAuth/useAuth';
 import './DashboardHome.css';
+import about from '../../../Images/about.jpg';
 
 const DashboardHome = () => {
     const { user } = useAuth();
@@ -14,7 +15,8 @@ const DashboardHome = () => {
                 </div>
             </div>
             <div>
-                <img className="img-fluid" src="https://i.ibb.co/QKMkyv5/price-specs-bg.png" alt="" />
+                {/* <img className="img-fluid" src="https://i.ibb.co/QKMkyv5/price-specs-bg.png" alt="" /> */}
+                <img className="img-fluid" src={about} alt="" />
             </div>
         </>
     );

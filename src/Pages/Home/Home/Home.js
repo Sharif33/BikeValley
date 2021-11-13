@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../Shared/Footer/Footer';
 import Header from '../../../Shared/Header/Header';
 import BannerMid from '../Banner/BannerMid';
 import BannerTop from '../Banner/BannerTop';
@@ -12,7 +13,11 @@ const Home = () => {
             <BannerTop></BannerTop>
             <BannerMid></BannerMid>
             <Bikes></Bikes>
-            <Reviews></Reviews>
+            <div>
+                <h3 className="text-center py-4">User Review</h3>
+                <Reviews></Reviews>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

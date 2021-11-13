@@ -50,16 +50,17 @@ function Dashboard(props) {
                     display: 'flex',
                     flexWrap: 'wrap',
                     justifyContent: 'center',
+                    alignItems: 'center',
                     '& > :not(style) + :not(style)': {
                         px: 2,
                         mb: 1,
                     },
                 }}>
-                    <Box sx={{ display: 'block' }}>
+                    <Box sx={{ display: 'block', textAlign: 'center' }}>
                         <img className="img-fluid px-3 w-50 rounded-circle mx-auto" src={user?.photoURL} alt="" />
-                        <h5>{user?.displayName}</h5>
+                        <h5 className="text-center">{user?.displayName}</h5>
+                        <Button sx={{ mb: 1 }} onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
                     </Box>
-                    <Button onClick={logOut} variant="outlined" color="error"><Logout fontSize="small" /> Logout</Button>
                 </Box>
             }
 
@@ -67,7 +68,7 @@ function Dashboard(props) {
 
             <Box sx={{ px: 2 }} >
                 <List>
-                    <Link to={`${url}`}><Button color="inherit"><DashboardIcon /> Dashboard</Button></Link>
+                    <Link style={{ textDecoration: "none" }} to={`${url}`}><Button color="inherit"><DashboardIcon /> Dashboard</Button></Link>
                 </List>
             </Box>
             {!admin && <Box sx={{ px: 2 }} >
@@ -75,35 +76,35 @@ function Dashboard(props) {
                     <Link style={{ textDecoration: "none" }} to={`${url}/myOrders`}><Button color="inherit">My Orders</Button></Link>
                 </List>
                 <List>
-                    <Link to={`${url}/reviews`}><Button color="inherit">Review</Button></Link>
+                    <Link style={{ textDecoration: "none" }} to={`${url}/reviews`}><Button color="inherit">Review</Button></Link>
                 </List>
                 <List>
-                    <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
+                    <Link style={{ textDecoration: "none" }} to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
                 </List>
             </Box>}
 
-            {/* {admin && isLoading && <CircularProgress />} */}
+            {/* {!admin && <CircularProgress />} */}
 
             {
                 admin && <Box sx={{ px: 2 }}>
                     <List>
-                        <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+                        <Link style={{ textDecoration: "none" }} to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
                     </List>
                     <List>
-                        <Link to={`${url}/manageProducts`}><Button color="inherit">Manage Products</Button></Link>
+                        <Link style={{ textDecoration: "none" }} to={`${url}/manageProducts`}><Button color="inherit">Manage Products</Button></Link>
                     </List>
                     <List>
-                        <Link to={`${url}/manageOrder`}><Button color="inherit">All Orders</Button></Link>
+                        <Link style={{ textDecoration: "none" }} to={`${url}/manageOrder`}><Button color="inherit">All Orders</Button></Link>
                     </List>
                     <List>
-                        <Link to={`${url}/addBike`}><Button color="inherit">Add Bike</Button></Link>
+                        <Link style={{ textDecoration: "none" }} to={`${url}/addBike`}><Button color="inherit">Add Bike</Button></Link>
                     </List>
                 </Box>
             }
 
             <Box sx={{ px: 2 }} >
                 <List>
-                    <Link to="/"><Button color="inherit">Home</Button></Link>
+                    <Link style={{ textDecoration: "none" }} to="/"><Button color="inherit">Home</Button></Link>
                 </List>
             </Box>
 

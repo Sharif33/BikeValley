@@ -10,19 +10,19 @@ const Review = () => {
     const { user } = useAuth();
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         axios.post(`http://localhost:5000/reviews`, data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
                     reset();
+                    window.location.reload();
                 }
             })
     }
     return (
         <div>
-            <Reviews></Reviews>
             <div className="add-bikes p-4 col-md-6 mx-auto">
                 <div className="shadow p-4 bg-custom rounded">
                     <h3 className="text-custom">Please Add a Review</h3>
@@ -36,6 +36,10 @@ const Review = () => {
                         <Button sx={{ width: "100%", letterSpacing: 4 }} type="submit" variant="contained">Submit</Button>
                     </form>
                 </div>
+            </div>
+            <div>
+                <h3 className="text-center text-warning py-4">Top Reviews</h3>
+                <Reviews></Reviews>
             </div>
         </div>
     );

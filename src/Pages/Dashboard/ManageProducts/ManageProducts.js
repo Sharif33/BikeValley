@@ -40,9 +40,9 @@ const ManageProducts = () => {
     }
 
     return (
-        <div>
+        <div className="container py-4">
             <TableContainer component={Paper}>
-                <Table stickyHeader sx={{}} aria-label="Manage Products table">
+                <Table sx={{}} aria-label="Manage Products table">
                     <TableHead>
                         <TableRow>
                             <TableCell>Name</TableCell>
