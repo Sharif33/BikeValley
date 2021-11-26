@@ -19,12 +19,19 @@ const ManageOrder = () => {
     const handleUpdate = (id) => {
         const proceed = window.confirm('Are you sure, you want to Update?');
         if (proceed) {
-            window.location.reload();
+
             fetch(`https://stormy-tundra-73783.herokuapp.com/updateStatus/${id}`, {
                 method: "PUT",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({ status })
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.modifiedCount > 0) {
+                        alert('Update Successful');
+                        window.location.reload();
+                    }
+                })
         }
 
     };
